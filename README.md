@@ -9,7 +9,7 @@
 <br>
 
 <p align="center">
-  <img alt="projeto DevLinks" src=".login/github/preview.jpg" width="100%">
+  <img alt="projeto Login" src="./login/github/preview.jpg" width="100%">
 </p>
 
 ## Deploy
