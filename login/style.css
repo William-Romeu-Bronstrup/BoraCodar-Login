@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-gray-50: #f8fafc;
+
+  --color-title: #1e293b;
+  --color-subtitle: #475569;
+  --color-wrong: #ed3a5a;
+  --color-correct: #7CE56C;
+  --color-input-placeholder: #94a3b8;
+  --color-purple: #7c3aed;
+  --color-purple-hover: #9f67ff;
+
+  --border-input-normal: #e2e8f0;
+  --border-when-hover-typing: #7c3aed;
+}
+
+body {
+  font-size: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+body * {
+  font-family: "Titillium Web", sans-serif;
+}
+
+#login {
+  width: 70.4rem;
+  height: 100%;
+  background-color: var(--bg-gray-50);
+
+  padding: 3.2rem 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#image {
+  width: 73.6rem;
+  height: 100%;
+  background-image: url("./assets/img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#content-box {
+  max-width: 38.4rem;
+  height: 100%;
+}
+
+#logo {
+  margin-bottom: 4rem;
+}
+
+#logo img {
+  width: 160px;
+  height: 54px;
+}
+
+#title h1 {
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 5.5rem;
+  color: var(--color-title);
+}
+
+#title p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--color-subtitle);
+  margin: 1.6rem 0 4rem;
+}
+
+#form-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+#form-inputs label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2.1rem;
+  margin-bottom: 8px;
+}
+
+.forgotPassword {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.6rem;
+}
+
+.forgotPassword a {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--color-purple);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.forgotPassword a:hover {
+  text-decoration: underline;
+}
+
+.input {
+  border-radius: 4px;
+  border: 1px solid var(--border-input-normal);
+  background: #fff;
+  color: var(--color-title);
+  outline: none;
+  font-weight: 600;
+  font-size: 15px;
+
+  padding: 1.6rem 4rem 1.6rem 1.2rem;
+}
+
+.input:invalid {
+  border: 1px solid var(--color-wrong);
+}
+
+.input:hover {
+  border: 1px solid var(--border-when-hover-typing);
+}
+
+.input::placeholder {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.1rem;
+  color: var(--color-input-placeholder);
+}
+
+.input:disabled {
+  border: 1px solid var(--border-input-normal);
+  cursor: not-allowed;
+}
+
+.input:disabled::placeholder {
+  color: var(--color-title);
+  opacity: 0.35;
+}
+
+#buttonSubmit {
+  background-color: var(--color-purple);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 1.6rem 2.4rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  transition: background 0.2s;
+}
+
+#buttonSubmit:hover {
+  background-color: var(--color-purple-hover);
+}
+
+#form-inputs p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--color-subtitle);
+  margin-top: 2rem;
+}
+
+#form-inputs p > a {
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-decoration: none;
+  line-height: 2.4rem;
+  color: var(--color-purple);
+}
+
+#form-inputs p > a:hover {
+  text-decoration: underline;
+}
+
+#eye {
+  position: relative;
+  width: 100%;
+}
+
+#eye input {
+  width: 100%;
+}
+
+#eye img {
+  position: absolute;
+  z-index: 1;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#img {
+  width: 20px;
+}
+
+.validation {
+  color: var(--bg-gray-50);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.1rem;
+  margin-top: 4px;
+  display: block;
+}
+
+.messages {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 16px 0 0 14px;
+
+  display: none;
+
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #FFF;
+
+  border-bottom: 8px solid var(--color-correct);
+
+  width: 170px;
+  height: 60px;
+  background-color: var(--color-correct);
+  border-radius: 5px;
+  animation-name: show;
+  animation-duration: 2.5s;
+  transition-timing-function: ease-out;
+}
+
+@keyframes show {
+  0% {
+    top: -90px;
+  }
+  50% {
+    top: 20px;
+  }
+  100% {
+    top: -90px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #login {
+    width: 100vw;
+  }
+  #image {
+    display: none;
+  }
+
+  #title h1 {
+    font-size: 2.6rem;
+    line-height: 3.5rem;
+  }
+}

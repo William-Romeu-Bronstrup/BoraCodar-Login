@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+    name="description"
+    content="Tela de login de uma empresa ficitícia chamada Vertigo
+    contento campos de email e senha. Email verificado com RegEx">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="William Romeu | Rocketseat">
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+
+    <title>BoraCodar-Login</title>
+  </head>
+  <body>
+    <div class="messages">
+      <h3>Usuário cadastrado!</h3>
+    </div>
+
+    <div id="login">
+      <main id="content-box">
+        <div id="logo">
+          <img
+            src="./assets/logo.svg"
+            alt="Logo da empresa Vertigo em cor preta e símbolo roxo na sua esquerda"
+          />
+        </div>
+
+        <section id="title">
+          <h1>Acesse a plataforma</h1>
+          <p>
+            Faça login ou registre-se para começar a construir seus projetos
+            ainda hoje.
+          </p>
+        </section>
+
+        <form action="">
+          <section id="form-inputs">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Digite seu e-mail"
+              class="input"
+            />
+            <span class="validation">Digite um e-mail válido</span>
+
+            <div class="forgotPassword">
+              <label for="password">Senha</label>
+              <a href="#">Esqueceu a senha?</a>
+            </div>
+            <div id="eye">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Digite sua senha"
+                class="input"
+              />
+              <img
+                src="assets/closeEye.svg"
+                alt="Imagem que simboliza que o input de senha está escondido"
+                id="img"
+              />
+            </div>
+            <span class="validation">Digite uma senha segura</span>
+
+            <button type="submit" id="buttonSubmit">Entrar</button>
+            <p>Ainda não tem uma conta? <a href="#">Inscreva-se</a></p>
+          </section>
+        </form>
+      </main>
+    </div>
+
+    <aside id="image"></aside>
+  </body>
+</html>
